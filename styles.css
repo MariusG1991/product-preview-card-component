@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  background-color: hsl(30, 38%, 92%);
+  color: hsl(228, 12%, 48%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  display: inline-block;
+}
+
+.product-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 36rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin: 0 1rem;
+}
+
+.image-wrapper {
+  background-image: url("./images/image-product-desktop.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.product-info-container {
+  padding: 2rem;
+}
+
+.product-category {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: hsl(228, 12%, 68%);
+}
+
+.product-title {
+  font-family: "Fraunces", serif;
+  line-height: 1;
+  color: hsl(212, 21%, 14%);
+  font-size: 2rem;
+}
+
+.product-info {
+  margin: 1.5rem 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.price-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.product-price {
+  font-family: "Fraunces", serif;
+  font-size: 1.875rem;
+  color: hsl(158, 36%, 37%);
+}
+
+.previous-price {
+  font-size: 0.75rem;
+  text-decoration: line-through;
+}
+
+.product-btn {
+  font-size: 0.875rem;
+  border: none;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(158, 36%, 37%);
+  font-family: inherit;
+  padding: 0.75em 1em;
+  width: 100%;
+  border-radius: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.product-btn span {
+  margin-left: 0.5em;
+}
+
+.product-btn:hover {
+  background-color: hsl(158, 36%, 20%);
+}
+
+@media screen and (max-width: 600px) {
+  .product-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .image-wrapper {
+    background-image: url("./images/image-product-mobile.jpg");
+    height: auto;
+  }
+}
